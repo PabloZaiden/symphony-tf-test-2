@@ -140,15 +140,15 @@ configure_orchestrator() {
         if [[ $is_mac == 0 ]]; then
             sedCommand="sed -i '' -e "
         fi
-        eval "git grep -l 'kv-symphony-environments' | xargs $sedCommand \"s/kv-symphony-environments/${SYMPHONY_KV_NAME}/g\""
-        eval "git grep -l 'devops-symphony-362' | xargs $sedCommand \"s/devops-symphony-362/${SYMPHONY_RG_NAME}/g\""
-        eval "git grep -l 'crsymphony360' | xargs $sedCommand \"s/crsymphony360/${SYMPHONY_ACR_NAME}/g\"" 
+        eval "git grep -l 'kv-qoupxlzb-291' | xargs $sedCommand \"s/kv-qoupxlzb-291/${SYMPHONY_KV_NAME}/g\""
+        eval "git grep -l 'rg-qoupxlzb-291' | xargs $sedCommand \"s/rg-qoupxlzb-291/${SYMPHONY_RG_NAME}/g\""
+        eval "git grep -l 'crqoupxlzb291' | xargs $sedCommand \"s/crqoupxlzb291/${SYMPHONY_ACR_NAME}/g\"" 
 
         if [ "$IACTOOL" == "bicep" ]; then
             create_pipelines_bicep
         else
             # Update SA state Name
-            eval "git grep -l 'symphonyremotestate360' | xargs $sedCommand \"s/symphonyremotestate360/${SYMPHONY_SA_STATE_NAME}/g\""
+            eval "git grep -l 'sastateqoupxlzb291' | xargs $sedCommand \"s/sastateqoupxlzb291/${SYMPHONY_SA_STATE_NAME}/g\""
             create_pipelines_terraform
         fi
 
